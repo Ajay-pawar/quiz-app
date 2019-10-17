@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Take My Quiz</title>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Quiz Management App</h1>
+    </header>
+    <div id="quizContainer" class="container">
+      <div class="title">Computer Quiz</div>
+      <div class="scoreandquestion">
+        <div id="scorecard"></div>
+        <div id="questionnumber" class="questionnumber"></div>
+      </div>
+      <div id="question" class="question"></div>
+      <label class="option"
+        ><input type="radio" name="option" value="1"/> <span id="opt1"></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="option" value="2"/> <span id="opt2"></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="option" value="3"/> <span id="opt3"></span
+      ></label>
+      <label class="option"
+        ><input type="radio" name="option" value="4"/> <span id="opt4"></span
+      ></label>
+      <button
+        style="display:none"
+        id="previousButton"
+        class="nextButton prevButton"
+        onclick="loadPreviousQuestion()"
+      >
+        Previous Question
+      </button>
+      <button id="nextButton" class="nextButton" onclick="loadNextQuestion()">
+        Next Question
+      </button>
+    </div>
+
+    <div id="result" class="container result" style="display:none"></div>
+    <div class="resetQuiz" id="resetQuiz">
+      <button
+        id="resetQuiz"
+        class="nextButton resetQuiz"
+        style="margin-right:47%"
+        type="button"
+        onclick="retake()"
+      >
+        Try Again
+      </button>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="quiz.js"></script>
+  </body>
+</html>
